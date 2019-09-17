@@ -238,7 +238,7 @@ namespace :sidekiq do
 
   def start_sidekiq(pid_file, idx = 0)
     args = []
-    args.push "--index #{idx}"
+#     args.push "--index #{idx}"
     args.push "--pidfile #{pid_file}"
     args.push "--environment #{fetch(:sidekiq_env)}"
     args.push "--logfile #{fetch(:sidekiq_log)}" if fetch(:sidekiq_log)
